@@ -32,6 +32,13 @@ const newProducts: Product[] = [
     category: "Mode",
     price: 179.50,
     image: "https://images.unsplash.com/photo-1608528577891-eb055944d21b?q=80&w=1887&auto=format&fit=crop"
+  },
+  {
+    id: 4,
+    name: "Huile d'Argan Pure Bio",
+    category: "Soins Beauté",
+    price: 34.99,
+    image: "https://images.unsplash.com/photo-1611082553366-b7f7f0870beb?q=80&w=1965&auto=format&fit=crop"
   }
 ];
 
@@ -52,7 +59,7 @@ const NewArrivals = () => {
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {newProducts.map((product) => (
             <div key={product.id} className="group relative overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-lg animate-fade-in">
               <div className="relative h-72 overflow-hidden">
