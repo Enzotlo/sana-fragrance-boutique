@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <h3 className="font-playfair text-2xl font-bold text-white mb-4">Sana Addict</h3>
             <p className="text-white mb-6">
-              Votre boutique de parfums de luxe, offrant une sélection exclusive des plus grandes marques internationales.
+              Votre boutique de mode et beauté, offrant une sélection exclusive des plus grandes marques internationales.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -94,16 +94,16 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-white mr-3 mt-0.5 flex-shrink-0" />
                 <span className="text-white">
-                  123 Rue des Parfums, 67000 Strasbourg, France
+                  31 rue Galilée, 67200 Strasbourg, France
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-white mr-3 flex-shrink-0" />
-                <span className="text-white">+33 1 23 45 67 89</span>
+                <span className="text-white">06 46 46 52 55</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-white mr-3 flex-shrink-0" />
-                <span className="text-white">contact@sanaaddict.com</span>
+                <span className="text-white">sanaaddict75@gmail.com</span>
               </li>
             </ul>
           </div>
