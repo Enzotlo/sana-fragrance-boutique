@@ -2,6 +2,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 type Product = {
   id: number;
@@ -53,10 +54,12 @@ const NewArrivals = () => {
               Derniers <span className="text-gradient">Arrivages</span>
             </h2>
           </div>
-          <Button variant="link" className="text-pink-primary flex items-center group mt-4 md:mt-0">
-            Voir toutes les nouveautés
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <Link to="/nouveautes">
+            <Button variant="link" className="text-pink-primary flex items-center group mt-4 md:mt-0">
+              Voir toutes les nouveautés
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">

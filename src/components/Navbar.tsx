@@ -3,11 +3,11 @@ import { ShoppingCart, Search, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
 import { 
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger
 } from "@/components/ui/navigation-menu";
@@ -29,31 +29,30 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <h1 className="text-2xl md:text-3xl font-playfair font-bold text-pink-primary">
                 Sana Addict
               </h1>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-foreground hover:text-pink-primary transition-colors duration-300"
             >
               Accueil
-            </a>
+            </Link>
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="hover:text-pink-primary">Mode</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid gap-3 p-4 md:w-[400px] lg:w-[500px]">
-                      <a href="#" className="block p-3 hover:bg-pink-primary/10 rounded-md">Caftans</a>
-                      <a href="#" className="block p-3 hover:bg-pink-primary/10 rounded-md">Robes marocaines</a>
-                      <a href="#" className="block p-3 hover:bg-pink-primary/10 rounded-md">Femme</a>
-                      <a href="#" className="block p-3 hover:bg-pink-primary/10 rounded-md">Homme</a>
+                      <Link to="/caftans" className="block p-3 hover:bg-pink-primary/10 rounded-md">Caftans</Link>
+                      <Link to="/robes-marocaines" className="block p-3 hover:bg-pink-primary/10 rounded-md">Robes marocaines</Link>
+                      <Link to="/mode-homme" className="block p-3 hover:bg-pink-primary/10 rounded-md">Homme</Link>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -65,21 +64,21 @@ const Navbar = () => {
                   <NavigationMenuTrigger className="hover:text-pink-primary">Beauté</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid gap-3 p-4 md:w-[400px] lg:w-[500px]">
-                      <a href="#" className="block p-3 hover:bg-pink-primary/10 rounded-md">Parfums</a>
-                      <a href="#" className="block p-3 hover:bg-pink-primary/10 rounded-md">Soins visage</a>
-                      <a href="#" className="block p-3 hover:bg-pink-primary/10 rounded-md">Soins corps</a>
-                      <a href="#" className="block p-3 hover:bg-pink-primary/10 rounded-md">Huiles essentielles</a>
+                      <Link to="/parfums" className="block p-3 hover:bg-pink-primary/10 rounded-md">Parfums</Link>
+                      <Link to="/soins-beaute" className="block p-3 hover:bg-pink-primary/10 rounded-md">Soins visage</Link>
+                      <Link to="/soins-beaute" className="block p-3 hover:bg-pink-primary/10 rounded-md">Soins corps</Link>
+                      <Link to="/soins-beaute" className="block p-3 hover:bg-pink-primary/10 rounded-md">Huiles essentielles</Link>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <a
-              href="#"
+            <Link
+              to="/nouveautes"
               className="text-foreground hover:text-pink-primary transition-colors duration-300"
             >
               Nouveautés
-            </a>
+            </Link>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -124,46 +123,43 @@ const Navbar = () => {
               <Search className="absolute right-3 h-4 w-4 text-pink-primary" />
             </div>
             <nav className="flex flex-col space-y-3">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2"
               >
                 Accueil
-              </a>
+              </Link>
               <div className="flex flex-col">
-                <a
-                  href="#"
+                <span
                   className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2 font-semibold"
                 >
                   Mode
-                </a>
+                </span>
                 <div className="pl-4 flex flex-col space-y-2 mt-2">
-                  <a href="#" className="text-foreground hover:text-pink-primary py-1">Caftans</a>
-                  <a href="#" className="text-foreground hover:text-pink-primary py-1">Robes marocaines</a>
-                  <a href="#" className="text-foreground hover:text-pink-primary py-1">Femme</a>
-                  <a href="#" className="text-foreground hover:text-pink-primary py-1">Homme</a>
+                  <Link to="/caftans" className="text-foreground hover:text-pink-primary py-1">Caftans</Link>
+                  <Link to="/robes-marocaines" className="text-foreground hover:text-pink-primary py-1">Robes marocaines</Link>
+                  <Link to="/mode-homme" className="text-foreground hover:text-pink-primary py-1">Homme</Link>
                 </div>
               </div>
               <div className="flex flex-col">
-                <a
-                  href="#"
+                <span
                   className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2 font-semibold"
                 >
                   Beauté
-                </a>
+                </span>
                 <div className="pl-4 flex flex-col space-y-2 mt-2">
-                  <a href="#" className="text-foreground hover:text-pink-primary py-1">Parfums</a>
-                  <a href="#" className="text-foreground hover:text-pink-primary py-1">Soins visage</a>
-                  <a href="#" className="text-foreground hover:text-pink-primary py-1">Soins corps</a>
-                  <a href="#" className="text-foreground hover:text-pink-primary py-1">Huiles essentielles</a>
+                  <Link to="/parfums" className="text-foreground hover:text-pink-primary py-1">Parfums</Link>
+                  <Link to="/soins-beaute" className="text-foreground hover:text-pink-primary py-1">Soins visage</Link>
+                  <Link to="/soins-beaute" className="text-foreground hover:text-pink-primary py-1">Soins corps</Link>
+                  <Link to="/soins-beaute" className="text-foreground hover:text-pink-primary py-1">Huiles essentielles</Link>
                 </div>
               </div>
-              <a
-                href="#"
+              <Link
+                to="/nouveautes"
                 className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2"
               >
                 Nouveautés
-              </a>
+              </Link>
             </nav>
           </div>
         )}
