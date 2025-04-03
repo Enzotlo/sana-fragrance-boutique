@@ -37,16 +37,16 @@ const newProducts: Product[] = [
 
 const NewArrivals = () => {
   return (
-    <section className="py-16 bg-deep-black">
+    <section className="py-16 bg-pink-primary/10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div>
-            <Badge className="bg-gold text-deep-black mb-4">NOUVEAU</Badge>
-            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-pure-white">
+            <Badge className="bg-pink-primary text-white mb-4">NOUVEAU</Badge>
+            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-foreground">
               Derniers <span className="text-gradient">Arrivages</span>
             </h2>
           </div>
-          <Button variant="link" className="text-gold flex items-center group mt-4 md:mt-0">
+          <Button variant="link" className="text-pink-primary flex items-center group mt-4 md:mt-0">
             Voir tous les nouveaux produits
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
@@ -54,23 +54,23 @@ const NewArrivals = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {newProducts.map((product) => (
-            <div key={product.id} className="group relative overflow-hidden rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:border-gold/30 animate-fade-in">
+            <div key={product.id} className="group relative overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-lg animate-fade-in">
               <div className="relative h-72 overflow-hidden">
                 <img 
                   src={product.image} 
                   alt={product.name} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <Badge className="absolute top-3 right-3 bg-gold text-deep-black font-semibold">
+                <Badge className="absolute top-3 right-3 bg-pink-primary text-white font-semibold">
                   Nouveau
                 </Badge>
               </div>
               <div className="p-5">
-                <span className="text-sm text-gold">{product.brand}</span>
-                <h3 className="font-playfair text-xl font-semibold mb-2 text-pure-white">{product.name}</h3>
+                <span className="text-sm text-pink-primary">{product.brand}</span>
+                <h3 className="font-playfair text-xl font-semibold mb-2 text-foreground">{product.name}</h3>
                 <div className="flex justify-between items-center">
-                  <span className="font-bold text-pure-white">{product.price.toFixed(2)} €</span>
-                  <Button variant="ghost" className="text-gold hover:text-gold-light hover:bg-gold/10">
+                  <span className="font-bold text-foreground">{product.price.toFixed(2)} €</span>
+                  <Button variant="ghost" className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10">
                     Découvrir
                   </Button>
                 </div>

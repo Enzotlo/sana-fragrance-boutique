@@ -12,23 +12,23 @@ const Hero = () => {
           backgroundPosition: "center 30%"
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-primary/40 to-pink-accent/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-primary/70 to-pink-accent/60"></div>
       </div>
 
       {/* Content */}
       <div className="relative container mx-auto h-full px-4 flex flex-col justify-center">
-        <div className="max-w-2xl animate-fade-in">
-          <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-pure-white mb-4 leading-tight">
+        <div className="max-w-2xl animate-fade-in bg-black/30 p-6 rounded-lg backdrop-blur-sm">
+          <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
             Découvrez <span className="text-gradient">l'essence du luxe</span> avec Sana Addict
           </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl">
+          <p className="text-lg md:text-xl text-white mb-8 max-w-xl">
             Des parfums d'exception sélectionnés avec passion pour sublimer votre élégance au quotidien.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <Button className="bg-pink-primary hover:bg-pink-accent text-white font-medium px-8 py-6 text-lg">
               Découvrir nos parfums
             </Button>
-            <Button variant="outline" className="border-pink-primary text-pink-primary hover:text-pink-accent hover:border-pink-accent px-8 py-6 text-lg">
+            <Button variant="outline" className="border-white text-white hover:text-pink-primary hover:bg-white px-8 py-6 text-lg">
               Nos promotions
             </Button>
           </div>
