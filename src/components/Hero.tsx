@@ -19,14 +19,14 @@ const Hero = () => {
       <div className="relative container mx-auto h-full px-4 flex flex-col justify-center">
         <div className="max-w-2xl animate-fade-in bg-black/30 p-6 rounded-lg backdrop-blur-sm">
           <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-            Découvrez <span className="text-gradient">l'essence du luxe</span> avec Sana Addict
+            Mode et Beauté <span className="text-gradient">à la marocaine</span> avec Sana Addict
           </h1>
           <p className="text-lg md:text-xl text-white mb-8 max-w-xl">
-            Des parfums d'exception sélectionnés avec passion pour sublimer votre élégance au quotidien.
+            Découvrez notre collection unique de parfums, soins beauté, robes et caftans marocains pour sublimer votre élégance.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <Button className="bg-pink-primary hover:bg-pink-accent text-white font-medium px-8 py-6 text-lg">
-              Découvrir nos parfums
+              Découvrir nos produits
             </Button>
             <Button variant="outline" className="border-white text-white hover:text-pink-primary hover:bg-white px-8 py-6 text-lg">
               Nos promotions

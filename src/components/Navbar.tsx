@@ -35,13 +35,19 @@ const Navbar = () => {
               href="#"
               className="text-foreground hover:text-pink-primary transition-colors duration-300"
             >
-              Femme
+              Mode
             </a>
             <a
               href="#"
               className="text-foreground hover:text-pink-primary transition-colors duration-300"
             >
-              Homme
+              Parfums
+            </a>
+            <a
+              href="#"
+              className="text-foreground hover:text-pink-primary transition-colors duration-300"
+            >
+              Soins Beauté
             </a>
             <a
               href="#"
@@ -98,13 +104,19 @@ const Navbar = () => {
                 href="#"
                 className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2"
               >
-                Femme
+                Mode
               </a>
               <a
                 href="#"
                 className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2"
               >
-                Homme
+                Parfums
+              </a>
+              <a
+                href="#"
+                className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2"
+              >
+                Soins Beauté
               </a>
               <a
                 href="#"

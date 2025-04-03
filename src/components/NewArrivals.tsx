@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 type Product = {
   id: number;
   name: string;
-  brand: string;
+  category: string;
   price: number;
   image: string;
 };
@@ -14,23 +14,23 @@ type Product = {
 const newProducts: Product[] = [
   {
     id: 1,
-    name: "Libre",
-    brand: "Yves Saint Laurent",
-    price: 119.99,
+    name: "Caftan Moderne Brodé",
+    category: "Mode",
+    price: 249.99,
     image: "https://images.unsplash.com/photo-1563170423-717654358332?q=80&w=1974&auto=format&fit=crop"
   },
   {
     id: 2,
-    name: "Good Girl",
-    brand: "Carolina Herrera",
-    price: 99.99,
+    name: "Crème Visage à l'Argan",
+    category: "Soins Beauté",
+    price: 49.99,
     image: "https://images.unsplash.com/photo-1595425970377-1370c3a8b8ab?q=80&w=1780&auto=format&fit=crop"
   },
   {
     id: 3,
-    name: "Eros",
-    brand: "Versace",
-    price: 89.50,
+    name: "Robe Longue Brodée",
+    category: "Mode",
+    price: 179.50,
     image: "https://images.unsplash.com/photo-1608528577891-eb055944d21b?q=80&w=1887&auto=format&fit=crop"
   }
 ];
@@ -47,7 +47,7 @@ const NewArrivals = () => {
             </h2>
           </div>
           <Button variant="link" className="text-pink-primary flex items-center group mt-4 md:mt-0">
-            Voir tous les nouveaux produits
+            Voir toutes les nouveautés
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
@@ -66,7 +66,7 @@ const NewArrivals = () => {
                 </Badge>
               </div>
               <div className="p-5">
-                <span className="text-sm text-pink-primary">{product.brand}</span>
+                <span className="text-sm text-pink-primary font-medium">{product.category}</span>
                 <h3 className="font-playfair text-xl font-semibold mb-2 text-foreground">{product.name}</h3>
                 <div className="flex justify-between items-center">
                   <span className="font-bold text-foreground">{product.price.toFixed(2)} €</span>

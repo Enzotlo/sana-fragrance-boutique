@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 type Product = {
   id: number;
   name: string;
-  brand: string;
+  category: string;
   price: number;
   image: string;
   isNew?: boolean;
@@ -16,23 +16,23 @@ type Product = {
 const featuredProducts: Product[] = [
   {
     id: 1,
-    name: "J'adore",
-    brand: "Dior",
-    price: 129.99,
+    name: "Caftan Marocain Traditionnel",
+    category: "Mode",
+    price: 299.99,
     image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1780&auto=format&fit=crop",
     isNew: true
   },
   {
     id: 2,
-    name: "Bleu de Chanel",
-    brand: "Chanel",
-    price: 115.00,
+    name: "Huile d'Argan Bio",
+    category: "Soins Beauté",
+    price: 45.00,
     image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=2070&auto=format&fit=crop"
   },
   {
     id: 3,
     name: "Black Opium",
-    brand: "Yves Saint Laurent",
+    category: "Parfums",
     price: 89.99,
     image: "https://images.unsplash.com/photo-1587017539504-67cfbddac569?q=80&w=1965&auto=format&fit=crop",
     isPromo: true,
@@ -40,9 +40,9 @@ const featuredProducts: Product[] = [
   },
   {
     id: 4,
-    name: "Sauvage",
-    brand: "Dior",
-    price: 109.99,
+    name: "Robe de Soirée Orientale",
+    category: "Mode",
+    price: 159.99,
     image: "https://images.unsplash.com/photo-1616949755610-8c9bcc30e71c?q=80&w=1964&auto=format&fit=crop"
   }
 ];
@@ -52,10 +52,10 @@ const FeaturedProducts = () => {
     <section className="py-16 md:py-24 container mx-auto px-4">
       <div className="text-center mb-12">
         <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-4">
-          Nos Parfums <span className="text-gradient">Emblématiques</span>
+          Nos Produits <span className="text-gradient">Emblématiques</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Découvrez notre sélection de parfums de prestige, choisis avec soin pour leur caractère unique et leur composition d'exception.
+          Découvrez notre sélection de mode, parfums et soins beauté, choisis avec soin pour leur caractère unique et leur qualité exceptionnelle.
         </p>
       </div>
 
@@ -71,16 +71,16 @@ const FeaturedProducts = () => {
               {(product.isNew || product.isPromo) && (
                 <div className="absolute top-3 right-3">
                   {product.isNew && (
-                    <Badge className="bg-gold text-deep-black font-semibold">Nouveau</Badge>
+                    <Badge className="bg-pink-primary text-white font-semibold">Nouveau</Badge>
                   )}
                   {product.isPromo && (
-                    <Badge className="bg-deep-black text-gold font-semibold">-{product.discount}%</Badge>
+                    <Badge className="bg-pink-accent text-white font-semibold">-{product.discount}%</Badge>
                   )}
                 </div>
               )}
             </div>
             <div className="p-5 flex flex-col flex-grow">
-              <span className="text-sm text-muted-foreground">{product.brand}</span>
+              <span className="text-sm text-pink-primary font-medium">{product.category}</span>
               <h3 className="font-playfair text-xl font-semibold mb-2">{product.name}</h3>
               
               <div className="mt-auto pt-4 flex justify-between items-center">
@@ -90,7 +90,7 @@ const FeaturedProducts = () => {
                       <span className="line-through text-muted-foreground mr-2">
                         {product.price.toFixed(2)} €
                       </span>
-                      <span className="font-bold text-gold">
+                      <span className="font-bold text-pink-primary">
                         {(product.price * (1 - (product.discount! / 100))).toFixed(2)} €
                       </span>
                     </div>
@@ -98,7 +98,7 @@ const FeaturedProducts = () => {
                     <span className="font-bold">{product.price.toFixed(2)} €</span>
                   )}
                 </div>
-                <Button variant="ghost" className="text-gold hover:text-gold-light hover:bg-gold/10">
+                <Button variant="ghost" className="text-pink-primary hover:text-white hover:bg-pink-primary/90">
                   Découvrir
                 </Button>
               </div>
@@ -108,8 +108,8 @@ const FeaturedProducts = () => {
       </div>
 
       <div className="text-center mt-12">
-        <Button className="bg-deep-black hover:bg-deep-black/80 text-gold border border-gold/30 px-8">
-          Voir tous nos parfums
+        <Button className="bg-pink-primary hover:bg-pink-accent text-white border border-pink-primary/30 px-8">
+          Voir tous nos produits
         </Button>
       </div>
     </section>
