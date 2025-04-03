@@ -12,12 +12,12 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full bg-deep-black/90 backdrop-blur-md sticky top-0 z-50">
+    <header className="w-full bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <a href="/" className="flex items-center">
-              <h1 className="text-2xl md:text-3xl font-playfair font-bold text-gold">
+              <h1 className="text-2xl md:text-3xl font-playfair font-bold text-pink-primary">
                 Sana Addict
               </h1>
             </a>
@@ -27,39 +27,27 @@ const Navbar = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <a
               href="/"
-              className="text-pure-white hover:text-gold transition-colors duration-300"
+              className="text-foreground hover:text-pink-primary transition-colors duration-300"
             >
               Accueil
             </a>
             <a
               href="#"
-              className="text-pure-white hover:text-gold transition-colors duration-300"
+              className="text-foreground hover:text-pink-primary transition-colors duration-300"
             >
               Femme
             </a>
             <a
               href="#"
-              className="text-pure-white hover:text-gold transition-colors duration-300"
+              className="text-foreground hover:text-pink-primary transition-colors duration-300"
             >
               Homme
             </a>
             <a
               href="#"
-              className="text-pure-white hover:text-gold transition-colors duration-300"
+              className="text-foreground hover:text-pink-primary transition-colors duration-300"
             >
               Nouveautés
-            </a>
-            <a
-              href="#"
-              className="text-pure-white hover:text-gold transition-colors duration-300"
-            >
-              Promotions
-            </a>
-            <a
-              href="#"
-              className="text-pure-white hover:text-gold transition-colors duration-300"
-            >
-              Contact
             </a>
           </nav>
 
@@ -68,19 +56,19 @@ const Navbar = () => {
               <Input
                 type="text"
                 placeholder="Rechercher..."
-                className="w-40 lg:w-60 bg-white/10 text-white border-gold/30 focus-visible:ring-gold/50"
+                className="w-40 lg:w-60 bg-secondary text-foreground border-pink-primary/30 focus-visible:ring-pink-primary/50"
               />
-              <Search className="absolute right-3 h-4 w-4 text-gold" />
+              <Search className="absolute right-3 h-4 w-4 text-pink-primary" />
             </div>
 
-            <Button variant="ghost" size="icon" className="text-gold">
+            <Button variant="ghost" size="icon" className="text-pink-primary">
               <ShoppingCart className="h-5 w-5" />
             </Button>
 
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden text-gold"
+              className="md:hidden text-pink-primary"
               onClick={toggleMenu}
             >
               {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -95,46 +83,34 @@ const Navbar = () => {
               <Input
                 type="text"
                 placeholder="Rechercher..."
-                className="w-full bg-white/10 text-white border-gold/30 focus-visible:ring-gold/50"
+                className="w-full bg-secondary text-foreground border-pink-primary/30 focus-visible:ring-pink-primary/50"
               />
-              <Search className="absolute right-3 h-4 w-4 text-gold" />
+              <Search className="absolute right-3 h-4 w-4 text-pink-primary" />
             </div>
             <nav className="flex flex-col space-y-3">
               <a
                 href="/"
-                className="text-pure-white hover:text-gold transition-colors duration-300 py-2"
+                className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2"
               >
                 Accueil
               </a>
               <a
                 href="#"
-                className="text-pure-white hover:text-gold transition-colors duration-300 py-2"
+                className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2"
               >
                 Femme
               </a>
               <a
                 href="#"
-                className="text-pure-white hover:text-gold transition-colors duration-300 py-2"
+                className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2"
               >
                 Homme
               </a>
               <a
                 href="#"
-                className="text-pure-white hover:text-gold transition-colors duration-300 py-2"
+                className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2"
               >
                 Nouveautés
-              </a>
-              <a
-                href="#"
-                className="text-pure-white hover:text-gold transition-colors duration-300 py-2"
-              >
-                Promotions
-              </a>
-              <a
-                href="#"
-                className="text-pure-white hover:text-gold transition-colors duration-300 py-2"
-              >
-                Contact
               </a>
             </nav>
           </div>

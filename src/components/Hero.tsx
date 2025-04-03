@@ -12,7 +12,7 @@ const Hero = () => {
           backgroundPosition: "center 30%"
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-black/80 to-deep-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-primary/40 to-pink-accent/30"></div>
       </div>
 
       {/* Content */}
@@ -25,10 +25,10 @@ const Hero = () => {
             Des parfums d'exception sélectionnés avec passion pour sublimer votre élégance au quotidien.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button className="bg-gold hover:bg-gold-light text-deep-black font-medium px-8 py-6 text-lg">
+            <Button className="bg-pink-primary hover:bg-pink-accent text-white font-medium px-8 py-6 text-lg">
               Découvrir nos parfums
             </Button>
-            <Button variant="outline" className="border-gold text-gold hover:text-gold-light hover:border-gold-light px-8 py-6 text-lg">
+            <Button variant="outline" className="border-pink-primary text-pink-primary hover:text-pink-accent hover:border-pink-accent px-8 py-6 text-lg">
               Nos promotions
             </Button>
           </div>

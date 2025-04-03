@@ -24,9 +24,10 @@ export default {
 				'lato': ['Lato', 'sans-serif'],
 			},
 			colors: {
-				'gold': '#D4AF37',
-				'gold-light': '#F5E7A0',
-				'deep-black': '#1A1F2C',
+				'pink-primary': '#FF719A',
+				'pink-light': '#FFE29F',
+				'pink-accent': '#FFA99F',
+				'soft-pink': '#FFDEE2',
 				'pure-white': '#FFFFFF',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
