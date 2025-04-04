@@ -1,5 +1,5 @@
 
-import { ShoppingCart, Search, Menu, X } from "lucide-react";
+import { Search, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,14 +14,9 @@ import {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [cartOpen, setCartOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  };
-
-  const toggleCart = () => {
-    setCartOpen(!cartOpen);
   };
 
   return (
@@ -91,15 +86,6 @@ const Navbar = () => {
               <Search className="absolute right-3 h-4 w-4 text-pink-primary" />
             </div>
 
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="text-pink-primary"
-              onClick={toggleCart}
-            >
-              <ShoppingCart className="h-5 w-5" />
-            </Button>
-
             <Button
               variant="ghost"
               size="icon"
@@ -161,34 +147,6 @@ const Navbar = () => {
                 Nouveautés
               </Link>
             </nav>
-          </div>
-        )}
-
-        {/* Shopping Cart Panel */}
-        {cartOpen && (
-          <div className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50">
-            <div className="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-xl animate-slide-in-from-right">
-              <div className="p-4 border-b flex justify-between items-center">
-                <h2 className="text-xl font-semibold">Votre panier</h2>
-                <Button variant="ghost" size="icon" onClick={toggleCart}>
-                  <X className="h-5 w-5" />
-                </Button>
-              </div>
-              
-              <div className="p-6 flex flex-col items-center justify-center h-[80vh]">
-                <div className="text-center">
-                  <ShoppingCart className="h-16 w-16 mx-auto text-muted-foreground mb-4" />
-                  <p className="text-xl text-muted-foreground mb-2">Votre panier est vide</p>
-                  <p className="text-sm text-muted-foreground mb-6">Commencez vos achats pour ajouter des articles</p>
-                  <Button 
-                    className="bg-pink-primary hover:bg-pink-accent text-white" 
-                    onClick={toggleCart}
-                  >
-                    Découvrir nos produits
-                  </Button>
-                </div>
-              </div>
-            </div>
           </div>
         )}
       </div>
