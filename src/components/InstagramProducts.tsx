@@ -60,8 +60,57 @@ export const parfumProducts: Product[] = [
   }
 ];
 
+// Add new necklace products
+export const bijouterieProducts: Product[] = [
+  {
+    id: 1,
+    name: "Collier Perles Bleues",
+    category: "Bijouterie",
+    price: 15.00,
+    image: "/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png",
+    instagramLink: "#",
+    description: "Magnifique collier en perles bleues avec ornement doré central."
+  },
+  {
+    id: 2,
+    name: "Collier Perles Rouges",
+    category: "Bijouterie",
+    price: 15.00,
+    image: "/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png",
+    instagramLink: "#",
+    description: "Élégant collier en perles rouges avec ornement doré et pierre rouge centrale."
+  },
+  {
+    id: 3,
+    name: "Collier Perles Champagne",
+    category: "Bijouterie",
+    price: 15.00,
+    image: "/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png",
+    instagramLink: "#",
+    description: "Collier raffiné en perles champagne avec ornement doré élégant."
+  },
+  {
+    id: 4,
+    name: "Collier Perles Noires",
+    category: "Bijouterie",
+    price: 15.00,
+    image: "/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png",
+    instagramLink: "#",
+    description: "Collier chic en perles noires avec ornement doré et cristal central."
+  },
+  {
+    id: 5,
+    name: "Collier Perles Vertes",
+    category: "Bijouterie",
+    price: 15.00,
+    image: "/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png",
+    instagramLink: "#",
+    description: "Collier tendance en perles vertes avec ornement doré et pierre verte."
+  }
+];
+
 // Combine all product types
-export const allProducts = [...instagramProducts, ...parfumProducts];
+export const allProducts = [...instagramProducts, ...parfumProducts, ...bijouterieProducts];
 
 // Reusable Product Card that links to Instagram
 export const InstagramProductCard = ({ product }: { product: Product }) => {

@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { allProducts, InstagramProductCard } from "./InstagramProducts";
+import { allProducts, bijouterieProducts, InstagramProductCard } from "./InstagramProducts";
 
 const FeaturedProducts = () => {
   return (
@@ -10,7 +10,7 @@ const FeaturedProducts = () => {
           Nos Produits <span className="text-gradient">Emblématiques</span>
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Découvrez notre sélection de caftans, robes marocaines et parfums exclusifs disponibles sur notre compte Instagram.
+          Découvrez notre sélection de caftans, robes marocaines, parfums exclusifs et bijoux disponibles sur notre compte Instagram.
         </p>
       </div>
 
@@ -18,6 +18,17 @@ const FeaturedProducts = () => {
         {allProducts.slice(0, 4).map((product) => (
           <InstagramProductCard key={product.id} product={product} />
         ))}
+      </div>
+
+      <div className="mt-16">
+        <h3 className="font-playfair text-2xl md:text-3xl font-bold mb-8 text-center">
+          Nos <span className="text-gradient">Bijoux</span>
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {bijouterieProducts.slice(0, 4).map((product) => (
+            <InstagramProductCard key={product.id} product={product} />
+          ))}
+        </div>
       </div>
 
       <div className="text-center mt-12">
