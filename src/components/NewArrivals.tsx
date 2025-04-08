@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { instagramProducts, InstagramProductCard } from "./InstagramProducts";
+import { allProducts, InstagramProductCard } from "./InstagramProducts";
 
 const NewArrivals = () => {
   return (
@@ -25,7 +25,7 @@ const NewArrivals = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {instagramProducts.slice(0, 4).map((product) => (
+          {allProducts.slice(0, 4).map((product) => (
             <InstagramProductCard key={product.id} product={product} />
           ))}
         </div>

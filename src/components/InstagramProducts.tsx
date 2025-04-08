@@ -8,6 +8,7 @@ export type Product = {
   price: number;
   image: string;
   instagramLink: string;
+  description?: string;
 };
 
 // These are the only products available for sale, taken directly from Instagram posts
@@ -45,6 +46,22 @@ export const instagramProducts: Product[] = [
     instagramLink: "https://www.instagram.com/p/C4Iu3dKtvVO/"
   }
 ];
+
+// Parfum products separate from Instagram products
+export const parfumProducts: Product[] = [
+  {
+    id: 1,
+    name: "Eau de Parfum Haya Arabia",
+    category: "Parfum",
+    price: 25.00,
+    image: "/lovable-uploads/b1451f21-d435-4b2f-a5b0-020abd878003.png",
+    instagramLink: "#",
+    description: "Notes de tête: héliotrope, orchidée, tangerine\nNotes de cœur: fruits tropicaux\nNotes de fond: vanille, musc, bois de santal\nType de parfum: floral, gourmand\n\nOffrez des sensations gourmandes à vos sens. L'eau de parfum pour femmes Le Chameau Arabia Haya regorge de délicieuses notes auxquelles il est difficile de résister, surtout si vous adorez les friandises sucrées.\n\nParfum oriental - Parfum sucré - Parfum floral"
+  }
+];
+
+// Combine all product types
+export const allProducts = [...instagramProducts, ...parfumProducts];
 
 // Reusable Product Card that links to Instagram
 export const InstagramProductCard = ({ product }: { product: Product }) => {
