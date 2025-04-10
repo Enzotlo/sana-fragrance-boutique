@@ -1,11 +1,14 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { allProducts, bijouterieProducts, InstagramProductCard } from "./InstagramProducts";
+import InstagramProductCard from "@/components/InstagramProductCard";
+import { getAllProducts, bijouterieProducts } from "@/data/ProductData";
 
 const NewArrivals = () => {
+  // Utiliser la fonction getAllProducts() pour obtenir tous les produits
+  const allProducts = getAllProducts();
+  
   return (
     <section className="py-16 bg-pink-primary/10">
       <div className="container mx-auto px-4">

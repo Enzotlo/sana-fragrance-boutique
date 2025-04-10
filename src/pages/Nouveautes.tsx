@@ -1,12 +1,10 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 import { Instagram } from "lucide-react";
-import { instagramProducts } from "@/components/InstagramProducts";
+import { instagramProducts, bijouterieProducts } from "@/components/InstagramProducts";
 
 const Nouveautes = () => {
   return (
@@ -19,31 +17,58 @@ const Nouveautes = () => {
               Nos <span className="text-pink-primary">Nouveautés</span>
             </h1>
             <p className="text-muted-foreground mb-6 max-w-3xl">
-              Découvrez nos dernières créations et nouveaux arrivages disponibles sur notre Instagram. Des caftans luxueux et des robes marocaines traditionnelles de haute qualité.
+              Découvrez nos produits phares, parfums d'exception et bijoux raffinés.
             </p>
-            
-            <div className="mb-6">
-              <a 
-                href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-pink-primary hover:text-pink-accent transition-colors"
-              >
-                <Instagram className="mr-2 h-5 w-5" />
-                Suivez-nous sur Instagram pour voir tous nos produits
-              </a>
-            </div>
           </div>
         </div>
         
         <div className="bg-pink-primary/10 py-16">
           <div className="container mx-auto px-4">
             <h2 className="font-playfair text-2xl md:text-3xl font-bold mb-8 text-center text-foreground">
-              Nos produits disponibles sur <span className="text-pink-primary">Instagram</span>
+              Nos <span className="text-pink-primary">produits phares</span>
             </h2>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-              {instagramProducts.map(product => (
+            <div className="bg-white p-8 rounded-lg mb-10 max-w-5xl mx-auto">
+              <h2 className="font-playfair text-2xl font-bold mb-4 text-foreground text-center">Collier 15€ pièce</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <img 
+                    src="/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png" 
+                    alt="Collection de Colliers" 
+                    className="w-full h-auto rounded-lg shadow-md"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Description</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Magnifique collection de colliers en perles colorées avec ornements dorés. Chaque collier est une pièce unique, fabriquée avec soin et attention aux détails.
+                  </p>
+                  <p className="text-muted-foreground mb-6">
+                    Disponibles en plusieurs couleurs : bleu, rouge, champagne, noir et vert. Ces colliers ajouteront une touche d'élégance et de sophistication à n'importe quelle tenue.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <Badge variant="outline" className="bg-pink-primary/10">Fait main</Badge>
+                    <Badge variant="outline" className="bg-pink-primary/10">Élégant</Badge>
+                    <Badge variant="outline" className="bg-pink-primary/10">Exclusif</Badge>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-bold text-2xl text-foreground">15.00 € par pièce</span>
+                    <a 
+                      href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="bg-pink-primary hover:bg-pink-accent text-white">
+                        Contacter pour commander
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 max-w-5xl mx-auto">
+              {bijouterieProducts.map(product => (
                 <Card key={product.id} className="overflow-hidden transition-all duration-300 hover:shadow-lg animate-fade-in">
                   <div className="relative h-72 overflow-hidden">
                     <img 
@@ -52,7 +77,7 @@ const Nouveautes = () => {
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                     />
                     <Badge className="absolute top-3 right-3 bg-pink-primary text-white font-semibold">
-                      Instagram
+                      Nouveau
                     </Badge>
                   </div>
                   <CardContent className="p-5">
@@ -61,13 +86,16 @@ const Nouveautes = () => {
                     <div className="flex justify-between items-center">
                       <span className="font-bold text-foreground">{product.price.toFixed(2)} €</span>
                       <a 
-                        href={product.instagramLink}
+                        href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 px-3 py-2 rounded transition-colors"
                       >
-                        Voir sur Instagram
-                        <Instagram className="ml-2 h-4 w-4" />
+                        <Button 
+                          variant="ghost" 
+                          className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10"
+                        >
+                          Contacter pour commander
+                        </Button>
                       </a>
                     </div>
                   </CardContent>
@@ -75,17 +103,50 @@ const Nouveautes = () => {
               ))}
             </div>
             
-            <div className="text-center mt-8">
-              <a 
-                href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block"
-              >
-                <Button className="bg-pink-primary hover:bg-pink-accent text-white border border-pink-primary/30 px-8">
-                  Voir tous nos produits sur Instagram
-                </Button>
-              </a>
+            <div className="bg-white p-8 rounded-lg mb-10 max-w-5xl mx-auto">
+              <h2 className="font-playfair text-2xl font-bold mb-4 text-foreground text-center">Eau de parfum haya 100ml - 25.00 €</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <img 
+                    src="/lovable-uploads/b1451f21-d435-4b2f-a5b0-020abd878003.png" 
+                    alt="Eau de parfum haya 100ml" 
+                    className="w-full h-auto rounded-lg shadow-md"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">Description</h3>
+                  <p className="text-muted-foreground mb-4">
+                    Notes de tête: héliotrope, orchidée, tangerine<br/>
+                    Notes de cœur: fruits tropicaux<br/>
+                    Notes de fond: vanille, musc, bois de santal
+                  </p>
+                  <p className="text-muted-foreground mb-4">
+                    Type de parfum: floral, gourmand
+                  </p>
+                  <p className="text-muted-foreground mb-6">
+                    Offrez des sensations gourmandes à vos sens. L'eau de parfum pour femmes Le Chameau Arabia Haya 
+                    regorge de délicieuses notes auxquelles il est difficile de résister, surtout si vous adorez 
+                    les friandises sucrées.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <Badge variant="outline" className="bg-pink-primary/10">Parfum oriental</Badge>
+                    <Badge variant="outline" className="bg-pink-primary/10">Parfum sucré</Badge>
+                    <Badge variant="outline" className="bg-pink-primary/10">Parfum floral</Badge>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-bold text-2xl text-foreground">25.00 €</span>
+                    <a 
+                      href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button className="bg-pink-primary hover:bg-pink-accent text-white">
+                        Contacter pour commander
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

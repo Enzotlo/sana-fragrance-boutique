@@ -1,8 +1,11 @@
-
 import { Button } from "@/components/ui/button";
-import { allProducts, bijouterieProducts, InstagramProductCard } from "./InstagramProducts";
+import InstagramProductCard from "@/components/InstagramProductCard";
+import { getAllProducts, bijouterieProducts } from "@/data/ProductData";
 
 const FeaturedProducts = () => {
+  // Utiliser la fonction getAllProducts() pour obtenir tous les produits
+  const allProducts = getAllProducts();
+  
   return (
     <section className="py-16 md:py-24 container mx-auto px-4">
       <div className="text-center mb-12">

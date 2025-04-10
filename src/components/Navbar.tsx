@@ -1,4 +1,3 @@
-
 import { Search, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -39,6 +38,8 @@ const Navbar = () => {
             >
               Accueil
             </Link>
+            
+            {/* Menu Mode */}
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -46,28 +47,57 @@ const Navbar = () => {
                   <NavigationMenuContent>
                     <div className="grid gap-3 p-4 md:w-[400px] lg:w-[500px]">
                       <Link to="/caftans" className="block p-3 hover:bg-pink-primary/10 rounded-md">Caftans</Link>
-                      <Link to="/robes-marocaines" className="block p-3 hover:bg-pink-primary/10 rounded-md">Robes marocaines</Link>
-                      <Link to="/mode-homme" className="block p-3 hover:bg-pink-primary/10 rounded-md">Homme</Link>
+                      <Link to="/bijouterie" className="block p-3 hover:bg-pink-primary/10 rounded-md">Bijoux</Link>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+            
+            {/* Menu Parfums */}
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="hover:text-pink-primary">Beauté</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="hover:text-pink-primary">Parfums</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid gap-3 p-4 md:w-[400px] lg:w-[500px]">
-                      <Link to="/parfums" className="block p-3 hover:bg-pink-primary/10 rounded-md">Parfums</Link>
-                      <Link to="/soins-beaute" className="block p-3 hover:bg-pink-primary/10 rounded-md">Soins visage</Link>
-                      <Link to="/soins-beaute" className="block p-3 hover:bg-pink-primary/10 rounded-md">Soins corps</Link>
-                      <Link to="/soins-beaute" className="block p-3 hover:bg-pink-primary/10 rounded-md">Huiles essentielles</Link>
+                      <Link to="/parfums" className="block p-3 hover:bg-pink-primary/10 rounded-md">Tous nos parfums</Link>
+                      <div className="p-3 hover:bg-pink-primary/10 rounded-md">
+                        <span className="font-medium block">Eau de parfum Haya</span>
+                        <span className="text-sm text-muted-foreground">25.00 €</span>
+                      </div>
+                      <div className="p-3 hover:bg-pink-primary/10 rounded-md">
+                        <span className="font-medium block">Eau de parfum Pomegrante</span>
+                        <span className="text-sm text-muted-foreground">20.00 €</span>
+                      </div>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+            
+            {/* Menu Bijoux */}
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="hover:text-pink-primary">Bijoux</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid gap-3 p-4 md:w-[400px] lg:w-[500px]">
+                      <Link to="/bijouterie" className="block p-3 hover:bg-pink-primary/10 rounded-md">Tous nos bijoux</Link>
+                      <div className="p-3 hover:bg-pink-primary/10 rounded-md">
+                        <span className="font-medium block">Colliers</span>
+                        <span className="text-sm text-muted-foreground">15.00 € pièce</span>
+                      </div>
+                      <div className="p-3 hover:bg-pink-primary/10 rounded-md">
+                        <span className="font-medium block">Boucles d'oreille</span>
+                        <span className="text-sm text-muted-foreground">10.00 € pièce</span>
+                      </div>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+            
             <Link
               to="/nouveautes"
               className="text-foreground hover:text-pink-primary transition-colors duration-300"
@@ -115,6 +145,8 @@ const Navbar = () => {
               >
                 Accueil
               </Link>
+              
+              {/* Mode mobile */}
               <div className="flex flex-col">
                 <span
                   className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2 font-semibold"
@@ -123,23 +155,50 @@ const Navbar = () => {
                 </span>
                 <div className="pl-4 flex flex-col space-y-2 mt-2">
                   <Link to="/caftans" className="text-foreground hover:text-pink-primary py-1">Caftans</Link>
-                  <Link to="/robes-marocaines" className="text-foreground hover:text-pink-primary py-1">Robes marocaines</Link>
-                  <Link to="/mode-homme" className="text-foreground hover:text-pink-primary py-1">Homme</Link>
+                  <Link to="/bijouterie" className="text-foreground hover:text-pink-primary py-1">Bijoux</Link>
                 </div>
               </div>
+              
+              {/* Parfums mobile */}
               <div className="flex flex-col">
                 <span
                   className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2 font-semibold"
                 >
-                  Beauté
+                  Parfums
                 </span>
                 <div className="pl-4 flex flex-col space-y-2 mt-2">
-                  <Link to="/parfums" className="text-foreground hover:text-pink-primary py-1">Parfums</Link>
-                  <Link to="/soins-beaute" className="text-foreground hover:text-pink-primary py-1">Soins visage</Link>
-                  <Link to="/soins-beaute" className="text-foreground hover:text-pink-primary py-1">Soins corps</Link>
-                  <Link to="/soins-beaute" className="text-foreground hover:text-pink-primary py-1">Huiles essentielles</Link>
+                  <Link to="/parfums" className="text-foreground hover:text-pink-primary py-1">Tous nos parfums</Link>
+                  <div className="text-foreground py-1">
+                    <span className="font-medium block">Eau de parfum Haya</span>
+                    <span className="text-sm text-muted-foreground">25.00 €</span>
+                  </div>
+                  <div className="text-foreground py-1">
+                    <span className="font-medium block">Eau de parfum Pomegrante</span>
+                    <span className="text-sm text-muted-foreground">20.00 €</span>
+                  </div>
                 </div>
               </div>
+              
+              {/* Bijoux mobile */}
+              <div className="flex flex-col">
+                <span
+                  className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2 font-semibold"
+                >
+                  Bijoux
+                </span>
+                <div className="pl-4 flex flex-col space-y-2 mt-2">
+                  <Link to="/bijouterie" className="text-foreground hover:text-pink-primary py-1">Tous nos bijoux</Link>
+                  <div className="text-foreground py-1">
+                    <span className="font-medium block">Colliers</span>
+                    <span className="text-sm text-muted-foreground">15.00 € pièce</span>
+                  </div>
+                  <div className="text-foreground py-1">
+                    <span className="font-medium block">Boucles d'oreille</span>
+                    <span className="text-sm text-muted-foreground">10.00 € pièce</span>
+                  </div>
+                </div>
+              </div>
+              
               <Link
                 to="/nouveautes"
                 className="text-foreground hover:text-pink-primary transition-colors duration-300 py-2"

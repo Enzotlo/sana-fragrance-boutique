@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -39,19 +38,22 @@ const Parfums = () => {
                 <span className="text-sm text-pink-primary font-medium">{item.category}</span>
                 <h3 className="font-playfair text-xl font-semibold mb-2 text-foreground">{item.name}</h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  {item.description?.split('\n')[0]}
+                  {typeof item.description === 'string' && item.description.split('\n')[0]}
                 </p>
                 <div className="flex justify-between items-center">
                   <span className="font-bold text-foreground">{item.price.toFixed(2)} €</span>
-                  <Button 
-                    variant="ghost" 
-                    className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10"
-                    onClick={() => {
-                      window.open('/lovable-uploads/37aa20b0-abe2-4c2d-ae76-41f4ac3d2678.png', '_blank');
-                    }}
+                  <a 
+                    href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Voir détails
-                  </Button>
+                    <Button 
+                      variant="ghost" 
+                      className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10"
+                    >
+                      Contacter pour commander
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
@@ -59,12 +61,53 @@ const Parfums = () => {
         </div>
 
         <div className="bg-pink-primary/5 p-8 rounded-lg mb-10">
-          <h2 className="font-playfair text-2xl font-bold mb-4 text-foreground">Eau de Parfum Haya Arabia</h2>
+          <h2 className="font-playfair text-2xl font-bold mb-4 text-foreground">Eau de parfum Pomegrante 60ml</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <img 
+                src="/lovable-uploads/pomegrante-musk-collection.jpg" 
+                alt="Eau de parfum Pomegrante 60ml" 
+                className="w-full h-auto rounded-lg shadow-md"
+              />
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg mb-2">Description</h3>
+              <p className="text-muted-foreground mb-4">
+                Notes de tête: Bergamote, Caramel, Framboise<br/>
+                Notes de cœur: Freesia, Jasmin, Rose<br/>
+                Notes de fond: Musc, Ambre
+              </p>
+              <p className="text-muted-foreground mb-6">
+                Un parfum élégant et fruité qui vous enveloppera d'une aura sensuelle et raffinée.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <Badge variant="outline" className="bg-pink-primary/10">Parfum fruité</Badge>
+                <Badge variant="outline" className="bg-pink-primary/10">Parfum floral</Badge>
+                <Badge variant="outline" className="bg-pink-primary/10">Parfum sensuel</Badge>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="font-bold text-2xl text-foreground">20.00 €</span>
+                <a 
+                  href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-pink-primary hover:bg-pink-accent text-white">
+                    Contacter pour commander
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-pink-primary/5 p-8 rounded-lg mb-10">
+          <h2 className="font-playfair text-2xl font-bold mb-4 text-foreground">Eau de parfum haya 100ml</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <img 
                 src="/lovable-uploads/b1451f21-d435-4b2f-a5b0-020abd878003.png" 
-                alt="Eau de Parfum Haya Arabia" 
+                alt="Eau de parfum haya 100ml" 
                 className="w-full h-auto rounded-lg shadow-md"
               />
             </div>
@@ -90,9 +133,15 @@ const Parfums = () => {
               </div>
               <div className="flex justify-between items-center">
                 <span className="font-bold text-2xl text-foreground">25.00 €</span>
-                <Button className="bg-pink-primary hover:bg-pink-accent text-white">
-                  Contacter pour commander
-                </Button>
+                <a 
+                  href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-pink-primary hover:bg-pink-accent text-white">
+                    Contacter pour commander
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
