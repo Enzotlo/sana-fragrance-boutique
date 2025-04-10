@@ -1,5 +1,5 @@
-
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -25,12 +25,19 @@ const Hero = () => {
             Découvrez notre collection unique de parfums, soins beauté, robes et caftans marocains pour sublimer votre élégance.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button className="bg-pink-primary hover:bg-pink-accent text-white font-medium px-8 py-6 text-lg">
-              Découvrir nos produits
-            </Button>
-            <Button variant="outline" className="border-white text-white hover:text-pink-primary hover:bg-white px-8 py-6 text-lg">
-              Nos promotions
-            </Button>
+            <Link to="/caftans">
+              <Button className="bg-pink-primary hover:bg-pink-accent text-white font-medium px-8 py-6 text-lg">
+                Découvrir nos produits
+              </Button>
+            </Link>
+            <Link to="/nouveautes">
+              <Button 
+                variant="outline" 
+                className="border-white bg-white/20 text-white hover:text-pink-primary hover:bg-white px-8 py-6 text-lg"
+              >
+                Nos promotions
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
