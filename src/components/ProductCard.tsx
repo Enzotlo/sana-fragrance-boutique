@@ -26,15 +26,25 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <h3 className="font-playfair text-xl font-semibold mb-2 text-foreground">{product.name}</h3>
         <div className="flex justify-between items-center">
           <span className="font-bold text-foreground">{product.price.toFixed(2)} €</span>
-          <a 
-            href={product.instagramLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 px-3 py-2 rounded transition-colors"
-          >
-            Voir sur Instagram
-            <Instagram className="ml-2 h-4 w-4" />
-          </a>
+          <div className="flex space-x-2">
+            <a 
+              href="https://shop.tiktok.com/view/product/1729479599136217158?region=FR&locale=fr&source=seller_center"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 px-3 py-2 rounded transition-colors"
+            >
+              TikTok
+            </a>
+            <a 
+              href="https://www.vinted.fr/member/15843015-abdelkadir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 px-3 py-2 rounded transition-colors"
+            >
+              Vinted
+              <Instagram className="ml-2 h-4 w-4" />
+            </a>
+          </div>
         </div>
       </CardContent>
     </Card>

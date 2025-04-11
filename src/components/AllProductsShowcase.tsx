@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import InstagramProductCard from "@/components/InstagramProductCard";
 import { 
@@ -59,14 +60,23 @@ const AllProductsShowcase = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 flex justify-center gap-4">
           <a 
-            href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
+            href="https://shop.tiktok.com/view/product/1729479599136217158?region=FR&locale=fr&source=seller_center"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Button className="bg-pink-primary hover:bg-pink-accent text-white border border-pink-primary/30 px-8">
-              Contacter pour commander
+              TikTok Shop
+            </Button>
+          </a>
+          <a 
+            href="https://www.vinted.fr/member/15843015-abdelkadir"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline" className="border-pink-primary text-pink-primary hover:bg-pink-primary/10 px-8">
+              Vinted
             </Button>
           </a>
         </div>
@@ -75,4 +85,4 @@ const AllProductsShowcase = () => {
   );
 };
 
-export default AllProductsShowcase; 
+export default AllProductsShowcase;

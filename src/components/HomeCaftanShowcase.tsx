@@ -59,6 +59,34 @@ const HomeCaftanShowcase = () => {
                             {caftan.sizes.join(", ")}
                           </Badge>
                         </div>
+                        <div className="mt-4 flex justify-end space-x-2">
+                          <a 
+                            href="https://shop.tiktok.com/view/product/1729479599136217158?region=FR&locale=fr&source=seller_center"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Button 
+                              variant="ghost" 
+                              size="sm"
+                              className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10"
+                            >
+                              TikTok Shop
+                            </Button>
+                          </a>
+                          <a 
+                            href="https://www.vinted.fr/member/15843015-abdelkadir"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Button 
+                              variant="ghost" 
+                              size="sm"
+                              className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10"
+                            >
+                              Vinted
+                            </Button>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>

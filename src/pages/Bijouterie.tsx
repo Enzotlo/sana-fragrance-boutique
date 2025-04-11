@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -53,18 +54,33 @@ const Bijouterie = () => {
               </p>
               <div className="flex justify-between items-center">
                 <span className="font-bold text-foreground">12.00 €</span>
-                <a 
-                  href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button 
-                    size="sm"
-                    className="bg-pink-primary hover:bg-pink-accent text-white"
+                <div className="flex space-x-2">
+                  <a 
+                    href="https://shop.tiktok.com/view/product/1729479599136217158?region=FR&locale=fr&source=seller_center"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Commander
-                  </Button>
-                </a>
+                    <Button 
+                      size="sm"
+                      className="bg-pink-primary hover:bg-pink-accent text-white"
+                    >
+                      TikTok Shop
+                    </Button>
+                  </a>
+                  <a 
+                    href="https://www.vinted.fr/member/15843015-abdelkadir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button 
+                      size="sm"
+                      variant="outline"
+                      className="border-pink-primary text-pink-primary hover:bg-pink-primary/10"
+                    >
+                      Vinted
+                    </Button>
+                  </a>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -87,18 +103,33 @@ const Bijouterie = () => {
               </p>
               <div className="flex justify-between items-center">
                 <span className="font-bold text-foreground">15.00 €</span>
-                <a 
-                  href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button 
-                    size="sm"
-                    className="bg-pink-primary hover:bg-pink-accent text-white"
+                <div className="flex space-x-2">
+                  <a 
+                    href="https://shop.tiktok.com/view/product/1729479599136217158?region=FR&locale=fr&source=seller_center"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Commander
-                  </Button>
-                </a>
+                    <Button 
+                      size="sm"
+                      className="bg-pink-primary hover:bg-pink-accent text-white"
+                    >
+                      TikTok Shop
+                    </Button>
+                  </a>
+                  <a 
+                    href="https://www.vinted.fr/member/15843015-abdelkadir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button 
+                      size="sm"
+                      variant="outline"
+                      className="border-pink-primary text-pink-primary hover:bg-pink-primary/10"
+                    >
+                      Vinted
+                    </Button>
+                  </a>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -121,18 +152,33 @@ const Bijouterie = () => {
               </p>
               <div className="flex justify-between items-center">
                 <span className="font-bold text-foreground">15.00 €</span>
-                <a 
-                  href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button 
-                    size="sm"
-                    className="bg-pink-primary hover:bg-pink-accent text-white"
+                <div className="flex space-x-2">
+                  <a 
+                    href="https://shop.tiktok.com/view/product/1729479599136217158?region=FR&locale=fr&source=seller_center"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Commander
-                  </Button>
-                </a>
+                    <Button 
+                      size="sm"
+                      className="bg-pink-primary hover:bg-pink-accent text-white"
+                    >
+                      TikTok Shop
+                    </Button>
+                  </a>
+                  <a 
+                    href="https://www.vinted.fr/member/15843015-abdelkadir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button 
+                      size="sm"
+                      variant="outline"
+                      className="border-pink-primary text-pink-primary hover:bg-pink-primary/10"
+                    >
+                      Vinted
+                    </Button>
+                  </a>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -160,19 +206,34 @@ const Bijouterie = () => {
                 <h3 className="font-playfair text-md font-semibold mb-1 text-foreground">{item.name}</h3>
                 <div className="flex justify-between items-center">
                   <span className="font-bold text-foreground">{item.price.toFixed(2)} €</span>
-                  <a 
-                    href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button 
-                      variant="ghost" 
-                      size="sm"
-                      className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 text-xs"
+                  <div className="flex gap-1">
+                    <a 
+                      href="https://shop.tiktok.com/view/product/1729479599136217158?region=FR&locale=fr&source=seller_center"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      Commander
-                    </Button>
-                  </a>
+                      <Button 
+                        variant="ghost" 
+                        size="sm"
+                        className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 text-xs px-2"
+                      >
+                        TikTok
+                      </Button>
+                    </a>
+                    <a 
+                      href="https://www.vinted.fr/member/15843015-abdelkadir"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button 
+                        variant="ghost" 
+                        size="sm"
+                        className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 text-xs px-2"
+                      >
+                        Vinted
+                      </Button>
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -198,19 +259,34 @@ const Bijouterie = () => {
                 <h3 className="font-playfair text-md font-semibold mb-1 text-foreground">{item.name}</h3>
                 <div className="flex justify-between items-center">
                   <span className="font-bold text-foreground">{item.price.toFixed(2)} €</span>
-                  <a 
-                    href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button 
-                      variant="ghost" 
-                      size="sm"
-                      className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 text-xs"
+                  <div className="flex gap-1">
+                    <a 
+                      href="https://shop.tiktok.com/view/product/1729479599136217158?region=FR&locale=fr&source=seller_center"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      Commander
-                    </Button>
-                  </a>
+                      <Button 
+                        variant="ghost" 
+                        size="sm"
+                        className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 text-xs px-2"
+                      >
+                        TikTok
+                      </Button>
+                    </a>
+                    <a 
+                      href="https://www.vinted.fr/member/15843015-abdelkadir"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button 
+                        variant="ghost" 
+                        size="sm"
+                        className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 text-xs px-2"
+                      >
+                        Vinted
+                      </Button>
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -236,19 +312,34 @@ const Bijouterie = () => {
                 <h3 className="font-playfair text-md font-semibold mb-1 text-foreground">{item.name}</h3>
                 <div className="flex justify-between items-center">
                   <span className="font-bold text-foreground">{item.price.toFixed(2)} €</span>
-                  <a 
-                    href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button 
-                      variant="ghost" 
-                      size="sm"
-                      className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 text-xs"
+                  <div className="flex gap-1">
+                    <a 
+                      href="https://shop.tiktok.com/view/product/1729479599136217158?region=FR&locale=fr&source=seller_center"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      Commander
-                    </Button>
-                  </a>
+                      <Button 
+                        variant="ghost" 
+                        size="sm"
+                        className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 text-xs px-2"
+                      >
+                        TikTok
+                      </Button>
+                    </a>
+                    <a 
+                      href="https://www.vinted.fr/member/15843015-abdelkadir"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button 
+                        variant="ghost" 
+                        size="sm"
+                        className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 text-xs px-2"
+                      >
+                        Vinted
+                      </Button>
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>

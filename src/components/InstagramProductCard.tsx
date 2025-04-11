@@ -1,3 +1,4 @@
+
 import { Instagram } from "lucide-react";
 import { Product } from "@/data/ProductData";
 
@@ -20,14 +21,25 @@ const InstagramProductCard = ({ product }: { product: Product }) => {
         <h3 className="font-playfair text-xl font-semibold mb-2 text-foreground">{product.name}</h3>
         <div className="flex justify-between items-center">
           <span className="font-bold text-foreground">{product.price.toFixed(2)} €</span>
-          <a 
-            href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-pink-primary hover:text-pink-accent transition-colors group"
-          >
-            Contacter pour commander
-          </a>
+          <div className="flex space-x-2">
+            <a 
+              href="https://shop.tiktok.com/view/product/1729479599136217158?region=FR&locale=fr&source=seller_center"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-pink-primary hover:text-pink-accent transition-colors group"
+            >
+              TikTok Shop
+            </a>
+            <span className="text-gray-300">|</span>
+            <a 
+              href="https://www.vinted.fr/member/15843015-abdelkadir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-pink-primary hover:text-pink-accent transition-colors group"
+            >
+              Vinted
+            </a>
+          </div>
         </div>
       </div>
     </div>

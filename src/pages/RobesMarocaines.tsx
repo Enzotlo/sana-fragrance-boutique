@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -40,18 +41,32 @@ const RobesMarocaines = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <span className="font-bold text-foreground">{item.price.toFixed(2)} €</span>
-                  <a 
-                    href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button 
-                      variant="ghost" 
-                      className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10"
+                  <div className="flex space-x-2">
+                    <a 
+                      href="https://shop.tiktok.com/view/product/1729479599136217158?region=FR&locale=fr&source=seller_center"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      Contacter pour commander
-                    </Button>
-                  </a>
+                      <Button 
+                        variant="ghost" 
+                        className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10"
+                      >
+                        TikTok Shop
+                      </Button>
+                    </a>
+                    <a 
+                      href="https://www.vinted.fr/member/15843015-abdelkadir"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button 
+                        variant="ghost" 
+                        className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10"
+                      >
+                        Vinted
+                      </Button>
+                    </a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -90,15 +105,26 @@ const RobesMarocaines = () => {
               </div>
               <div className="flex justify-between items-center">
                 <span className="font-bold text-2xl text-foreground">25.00 €</span>
-                <a 
-                  href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button className="bg-pink-primary hover:bg-pink-accent text-white">
-                    Contacter pour commander
-                  </Button>
-                </a>
+                <div className="flex space-x-2">
+                  <a 
+                    href="https://shop.tiktok.com/view/product/1729479599136217158?region=FR&locale=fr&source=seller_center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-pink-primary hover:bg-pink-accent text-white">
+                      TikTok Shop
+                    </Button>
+                  </a>
+                  <a 
+                    href="https://www.vinted.fr/member/15843015-abdelkadir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" className="border-pink-primary text-pink-primary hover:bg-pink-primary/10">
+                      Vinted
+                    </Button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
