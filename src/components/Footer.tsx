@@ -19,9 +19,10 @@ const Footer = () => {
                 href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white hover:text-pink-accent transition-colors"
+                className="flex items-center text-white hover:text-pink-accent transition-colors bg-white/10 px-3 py-2 rounded-full"
               >
-                <Instagram className="h-5 w-5" />
+                <Instagram className="h-5 w-5 mr-2" />
+                <span>@sanaaddict67</span>
               </a>
               <a 
                 href="#" 
@@ -105,6 +106,17 @@ const Footer = () => {
                 <Mail className="h-5 w-5 text-white mr-3 flex-shrink-0" />
                 <span className="text-white">sanaaddict75@gmail.com</span>
               </li>
+              <li className="flex items-center">
+                <Instagram className="h-5 w-5 text-white mr-3 flex-shrink-0" />
+                <a 
+                  href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-pink-accent transition-colors"
+                >
+                  @sanaaddict67
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -127,8 +139,17 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-12 pt-6 text-center text-white text-sm">
-          <p>&copy; {new Date().getFullYear()} Sana Addict. Tous droits réservés.</p>
+        <div className="border-t border-white/20 mt-12 pt-6 text-center">
+          <p className="text-white text-sm mb-2">&copy; {new Date().getFullYear()} Sana Addict. Tous droits réservés.</p>
+          <a 
+            href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-white hover:text-pink-accent transition-colors bg-white/10 px-3 py-1 rounded-full text-sm"
+          >
+            <Instagram className="h-4 w-4 mr-1" />
+            Suivez-nous sur Instagram @sanaaddict67
+          </a>
         </div>
       </div>
     </footer>

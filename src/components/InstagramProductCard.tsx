@@ -12,9 +12,14 @@ const InstagramProductCard = ({ product }: { product: Product }) => {
           alt={product.name} 
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute top-3 right-3 bg-pink-primary text-white font-semibold p-1 rounded-full">
+        <a 
+          href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="absolute top-3 right-3 bg-pink-primary hover:bg-pink-accent text-white font-semibold p-1 rounded-full transition-colors"
+        >
           <Instagram className="h-4 w-4" />
-        </div>
+        </a>
       </div>
       <div className="p-5">
         <span className="text-sm text-pink-primary font-medium">{product.category}</span>
@@ -38,6 +43,15 @@ const InstagramProductCard = ({ product }: { product: Product }) => {
               className="inline-flex items-center text-pink-primary hover:text-pink-accent transition-colors group"
             >
               Vinted
+            </a>
+            <span className="text-gray-300">|</span>
+            <a 
+              href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-pink-primary hover:text-pink-accent transition-colors group"
+            >
+              <Instagram className="h-4 w-4" />
             </a>
           </div>
         </div>
