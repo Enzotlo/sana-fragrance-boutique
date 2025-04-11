@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,12 +9,16 @@ const Bijouterie = () => {
   // Regrouper et filtrer les produits par type sans duplication
   const colliers = bijouterieProducts.filter(item => item.name.includes("Collier"));
   const boucles = bijouterieProducts.filter(item => item.name.includes("Boucles")).slice(0, 2);
-  const couronnes = bijouterieProducts.filter(item => item.name.includes("Couronne"));
   
-  // Assurons-nous qu'il n'y a pas de doublons basés sur l'image
-  const uniqueCouronnes = couronnes.filter((item, index, self) => 
-    index === self.findIndex((t) => t.image === item.image)
-  );
+  // Pour les couronnes, puisque "Couronne Verte" et "Couronne Verte Élégante" sont le même article,
+  // nous prenons seulement la "Couronne Verte Élégante" qui a l'image distincte
+  const uniqueCouronnes = bijouterieProducts
+    .filter(item => item.name.includes("Couronne"))
+    .filter((item, index, self) => 
+      // Utiliser l'ID pour filtrer les doublons plutôt que l'image
+      // Garder uniquement la Couronne Verte Élégante (id: 12)
+      item.id === 12
+    );
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -214,7 +217,7 @@ const Bijouterie = () => {
           ))}
         </div>
         
-        {/* Section Couronnes */}
+        {/* Section Couronnes - Maintenant avec une seule couronne */}
         <h4 className="font-playfair text-xl font-semibold mb-4 mt-8">Couronnes</h4>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
           {uniqueCouronnes.map((item) => (
