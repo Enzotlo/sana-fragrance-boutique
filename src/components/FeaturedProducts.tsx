@@ -1,10 +1,19 @@
+
 import { Button } from "@/components/ui/button";
 import InstagramProductCard from "@/components/InstagramProductCard";
-import { getAllProducts, bijouterieProducts } from "@/data/ProductData";
+import { 
+  featuredParfumProducts,
+  featuredBijouterieProducts, 
+  featuredCaftansProducts 
+} from "@/data/ProductData";
 
 const FeaturedProducts = () => {
-  // Utiliser la fonction getAllProducts() pour obtenir tous les produits
-  const allProducts = getAllProducts();
+  // Combine the featured products from different categories
+  const featuredProducts = [
+    ...featuredParfumProducts,
+    ...featuredCaftansProducts.slice(0, 1),
+    ...featuredBijouterieProducts.slice(0, 2)
+  ];
   
   return (
     <section className="py-16 md:py-24 container mx-auto px-4">
@@ -18,7 +27,7 @@ const FeaturedProducts = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {allProducts.slice(0, 4).map((product) => (
+        {featuredProducts.slice(0, 4).map((product) => (
           <InstagramProductCard key={product.id} product={product} />
         ))}
       </div>
@@ -28,7 +37,7 @@ const FeaturedProducts = () => {
           Nos <span className="text-gradient">Bijoux</span>
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {bijouterieProducts.slice(0, 4).map((product) => (
+          {featuredBijouterieProducts.map((product) => (
             <InstagramProductCard key={product.id} product={product} />
           ))}
         </div>

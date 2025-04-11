@@ -1,3 +1,4 @@
+
 export type Product = {
   id: number;
   name: string;
@@ -15,7 +16,7 @@ const hayaParfum: Product = {
   category: "Parfum",
   price: 25.00,
   image: "/lovable-uploads/b1451f21-d435-4b2f-a5b0-020abd878003.png",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/p/DFHxqCUo1xb/",
   description: "Notes de tête: héliotrope, orchidée, tangerine\nNotes de cœur: fruits tropicaux\nNotes de fond: vanille, musc, bois de santal\nType de parfum: floral, gourmand\n\nOffrez des sensations gourmandes à vos sens. L'eau de parfum pour femmes Le Chameau Arabia Haya regorge de délicieuses notes auxquelles il est difficile de résister, surtout si vous adorez les friandises sucrées.\n\nParfum oriental - Parfum sucré - Parfum floral"
 };
 
@@ -25,7 +26,7 @@ const pomegranateParfum: Product = {
   category: "Parfum",
   price: 20.00,
   image: "/lovable-uploads/pomegrante-musk-collection.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/p/C_1BHBEtxWu/",
   description: "Notes de tête: Bergamote, Caramel, Framboise\nNotes de cœur: Freesia, Jasmin, Rose\nNotes de fond: Musc, Ambre\n\nUn parfum élégant et fruité qui vous enveloppera d'une aura sensuelle et raffinée."
 };
 
@@ -36,7 +37,7 @@ const collierBleu: Product = {
   category: "Bijouterie",
   price: 15.00,
   image: "/lovable-uploads/collier-bleu.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/p/C4Iu3dKtvVO/",
   description: "Magnifique collier bleu avec finitions artisanales. Ajoutez une touche d'élégance à vos tenues avec ce bijou unique."
 };
 
@@ -46,7 +47,7 @@ const collierRouge: Product = {
   category: "Bijouterie",
   price: 15.00,
   image: "/lovable-uploads/collierrougz+bouclesrouges.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/p/C4Iu3dKtvVO/",
   description: "Élégant collier rouge avec possibilité d'assortir avec des boucles d'oreilles (vendues séparément)."
 };
 
@@ -56,7 +57,7 @@ const collierBlanc: Product = {
   category: "Bijouterie",
   price: 15.00,
   image: "/lovable-uploads/collierblanc.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/p/C4Iu3dKtvVO/",
   description: "Collier raffiné blanc avec finitions élégantes. Un accessoire idéal pour sublimer toutes vos tenues."
 };
 
@@ -66,7 +67,7 @@ const collierNoir: Product = {
   category: "Bijouterie",
   price: 15.00,
   image: "/lovable-uploads/collier-noir.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/p/C4Iu3dKtvVO/",
   description: "Collier chic noir avec ornement central. Un accessoire intemporel qui s'adapte à toutes les occasions."
 };
 
@@ -76,7 +77,7 @@ const collierVert: Product = {
   category: "Bijouterie",
   price: 15.00,
   image: "/lovable-uploads/colliervert+bouclesoreillesvert+couronnevert.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/p/C4Iu3dKtvVO/",
   description: "Collier tendance vert, pouvant être assorti avec boucles d'oreilles et couronne de la même teinte (vendus séparément)."
 };
 
@@ -86,7 +87,7 @@ const collierDore: Product = {
   category: "Bijouterie",
   price: 15.00,
   image: "/lovable-uploads/collier-dore.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/p/C4Iu3dKtvVO/",
   description: "Élégant collier doré au design raffiné. Une pièce incontournable pour sublimer vos tenues de soirée."
 };
 
@@ -97,7 +98,7 @@ const bouclesOreillesRouges: Product = {
   category: "Bijouterie",
   price: 12.00,
   image: "/lovable-uploads/collierrougz+bouclesrouges.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/p/C4Iu3dKtvVO/",
   description: "Élégantes boucles d'oreilles rouges, parfaites pour compléter votre parure avec le collier assorti (vendu séparément)."
 };
 
@@ -107,7 +108,7 @@ const bouclesOreillesVertes: Product = {
   category: "Bijouterie",
   price: 12.00,
   image: "/lovable-uploads/colliervert+bouclesoreillesvert+couronnevert.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/p/C4Iu3dKtvVO/",
   description: "Boucles d'oreilles vertes artisanales, parfaites pour compléter votre parure avec le collier et la couronne assortis (vendus séparément)."
 };
 
@@ -118,7 +119,7 @@ const couronneVerte: Product = {
   category: "Bijouterie",
   price: 15.00,
   image: "/lovable-uploads/colliervert+bouclesoreillesvert+couronnevert.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/p/C4Iu3dKtvVO/",
   description: "Magnifique couronne verte artisanale pour sublimer vos coiffures. Parfaite avec les boucles d'oreilles et le collier assortis (vendus séparément)."
 };
 
@@ -128,7 +129,7 @@ const couronneVerte2: Product = {
   category: "Bijouterie",
   price: 15.00,
   image: "/lovable-uploads/couronneverte.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/p/C4Iu3dKtvVO/",
   description: "Somptueuse couronne verte avec finitions dorées. Un accessoire royal pour vos occasions spéciales."
 };
 
@@ -139,7 +140,7 @@ const caftanRouge: Product = {
   category: "Mode",
   price: 120.00,
   image: "/lovable-uploads/caftan-rouge-1.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/reel/DEFk9QRo371/",
   description: "Magnifique caftan en velours rouge avec broderies dorées traditionnelles, idéal pour les occasions spéciales."
 };
 
@@ -149,7 +150,7 @@ const caftanBleu: Product = {
   category: "Mode",
   price: 120.00,
   image: "/lovable-uploads/caftan-bleu-1.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/reel/DEFk9QRo371/",
   description: "Élégant caftan en velours bleu royal avec des détails dorés finement travaillés."
 };
 
@@ -159,7 +160,7 @@ const caftanBlanc: Product = {
   category: "Mode",
   price: 130.00,
   image: "/lovable-uploads/caftan-blanc-1.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/reel/DEFk9QRo371/",
   description: "Caftan blanc crème avec broderies dorées et rouges, parfait pour les célébrations ou mariages."
 };
 
@@ -169,7 +170,7 @@ const caftanVert: Product = {
   category: "Mode",
   price: 120.00,
   image: "/lovable-uploads/caftan-vert-1.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/reel/DEFk9QRo371/",
   description: "Superbe caftan en velours vert émeraude avec broderies dorées et détails traditionnels."
 };
 
@@ -179,7 +180,7 @@ const caftanBeige: Product = {
   category: "Mode",
   price: 110.00,
   image: "/lovable-uploads/caftan-beige-1.jpg",
-  instagramLink: "#",
+  instagramLink: "https://www.instagram.com/reel/DEFk9QRo371/",
   description: "Caftan beige doré avec motifs floraux en soie et broderies or, une pièce élégante et confortable."
 };
 
@@ -212,13 +213,32 @@ export const bijouterieProducts: Product[] = [
   couronneVerte, couronneVerte2
 ];
 export const caftansProducts: Product[] = [caftanRouge, caftanBleu, caftanBlanc, caftanVert, caftanBeige];
-export const robesMarocainesProducts: Product[] = [caftanRouge, caftanBleu, caftanBlanc, caftanVert, caftanBeige];
-export const soinsBeauteProducts: Product[] = [hayaParfum, pomegranateParfum];
+
+// Créer des catégories distinctes pour éviter les doublons sur la page d'accueil
+export const featuredBijouterieProducts: Product[] = [collierBleu, collierRouge, collierVert, collierDore];
+export const featuredCaftansProducts: Product[] = [caftanRouge, caftanBleu];
+export const featuredParfumProducts: Product[] = [hayaParfum];
+
+// Nouveautés - sélection différente pour éviter les doublons
+export const newBijouterieProducts: Product[] = [couronneVerte2, collierBlanc, collierNoir];
+export const newCaftansProducts: Product[] = [caftanBlanc, caftanVert];
+export const newParfumProducts: Product[] = [pomegranateParfum];
+
+// Catégories spécifiques pour certaines pages
+export const robesMarocainesProducts: Product[] = [...caftansProducts];
+export const soinsBeauteProducts: Product[] = [...parfumProducts];
 export const modeHommeProducts: Product[] = [];
-export const nouveautesProducts: Product[] = [...allProductsList];
+export const nouveautesProducts: Product[] = [
+  couronneVerte2, 
+  collierBlanc, 
+  collierNoir, 
+  hayaParfum, 
+  pomegranateParfum, 
+  caftanBlanc
+];
 export const instagramProducts: Product[] = [...allProductsList];
 
 // Fonction pour obtenir tous les produits
 export function getAllProducts(): Product[] {
   return [...allProductsList];
-} 
+}
