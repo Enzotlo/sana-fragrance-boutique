@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 
-// We need to export this from CaftanShowcase.tsx, so let's create a separate import
+// Import from data/caftans.ts, not from CaftanShowcase
 import { caftansByColor } from "@/data/caftans";
 
 const HomeCaftanShowcase = () => {

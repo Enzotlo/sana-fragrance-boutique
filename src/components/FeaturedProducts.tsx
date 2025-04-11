@@ -8,11 +8,16 @@ import {
 } from "@/data/ProductData";
 
 const FeaturedProducts = () => {
-  // Combine the featured products from different categories
+  // Filter out duplicate products by ensuring we only have one product of each color
+  const uniqueBijouterieProducts = featuredBijouterieProducts.filter((product, index, self) => 
+    index === self.findIndex((p) => p.name.includes(product.name.split(" ")[1]))
+  );
+  
+  // Combine the featured products from different categories, making sure to avoid duplication
   const featuredProducts = [
     ...featuredParfumProducts,
     ...featuredCaftansProducts.slice(0, 1),
-    ...featuredBijouterieProducts.slice(0, 2)
+    ...uniqueBijouterieProducts.slice(0, 2)
   ];
   
   return (
@@ -37,7 +42,8 @@ const FeaturedProducts = () => {
           Nos <span className="text-gradient">Bijoux</span>
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {featuredBijouterieProducts.map((product) => (
+          {/* Only show unique bijouterie products, avoiding duplicates by color */}
+          {uniqueBijouterieProducts.map((product) => (
             <InstagramProductCard key={product.id} product={product} />
           ))}
         </div>
