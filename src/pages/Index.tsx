@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import FeaturedProducts from "@/components/FeaturedProducts";
+import HomeCaftanShowcase from "@/components/HomeCaftanShowcase";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -11,6 +12,7 @@ const Index = () => {
       <main className="flex-grow">
         <Hero />
         <FeaturedProducts />
+        <HomeCaftanShowcase />
       </main>
       <Footer />
     </div>

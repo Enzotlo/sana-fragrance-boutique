@@ -1,3 +1,4 @@
+
 import {
   Carousel,
   CarouselContent,
@@ -7,10 +8,10 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
-// Importer les données des caftans du composant CaftanShowcase
-import { caftansByColor } from "@/components/CaftanShowcase";
+// We need to export this from CaftanShowcase.tsx, so let's create a separate import
+import { caftansByColor } from "@/data/caftans";
 
 const HomeCaftanShowcase = () => {
   // Créer un tableau de tous les caftans à partir de caftansByColor
@@ -73,7 +74,7 @@ const HomeCaftanShowcase = () => {
       </div>
 
       <div className="text-center mt-8">
-        <Link href="/Caftans">
+        <Link to="/Caftans">
           <Button className="bg-pink-primary hover:bg-pink-accent text-white">
             Voir tous nos caftans
           </Button>
@@ -83,4 +84,4 @@ const HomeCaftanShowcase = () => {
   );
 };
 
-export default HomeCaftanShowcase; 
+export default HomeCaftanShowcase;
