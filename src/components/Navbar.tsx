@@ -89,8 +89,12 @@ const Navbar = () => {
                         <span className="text-sm text-muted-foreground">15.00 € pièce</span>
                       </div>
                       <div className="p-3 hover:bg-pink-primary/10 rounded-md">
-                        <span className="font-medium block">Boucles d'oreille</span>
-                        <span className="text-sm text-muted-foreground">10.00 € pièce</span>
+                        <span className="font-medium block">Boucles d'oreilles</span>
+                        <span className="text-sm text-muted-foreground">12.00 € pièce</span>
+                      </div>
+                      <div className="p-3 hover:bg-pink-primary/10 rounded-md">
+                        <span className="font-medium block">Couronnes</span>
+                        <span className="text-sm text-muted-foreground">15.00 € pièce</span>
                       </div>
                     </div>
                   </NavigationMenuContent>
@@ -193,8 +197,12 @@ const Navbar = () => {
                     <span className="text-sm text-muted-foreground">15.00 € pièce</span>
                   </div>
                   <div className="text-foreground py-1">
-                    <span className="font-medium block">Boucles d'oreille</span>
-                    <span className="text-sm text-muted-foreground">10.00 € pièce</span>
+                    <span className="font-medium block">Boucles d'oreilles</span>
+                    <span className="text-sm text-muted-foreground">12.00 € pièce</span>
+                  </div>
+                  <div className="text-foreground py-1">
+                    <span className="font-medium block">Couronnes</span>
+                    <span className="text-sm text-muted-foreground">15.00 € pièce</span>
                   </div>
                 </div>
               </div>

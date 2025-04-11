@@ -32,68 +32,109 @@ const pomegranateParfum: Product = {
 // Colliers
 const collierBleu: Product = {
   id: 3,
-  name: "Collier Perles Bleues",
+  name: "Collier Bleu",
   category: "Bijouterie",
   price: 15.00,
-  image: "/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png",
+  image: "/lovable-uploads/collier-bleu.jpg",
   instagramLink: "#",
-  description: "Magnifique collier en perles bleues avec ornement doré central."
+  description: "Magnifique collier bleu avec finitions artisanales. Ajoutez une touche d'élégance à vos tenues avec ce bijou unique."
 };
 
 const collierRouge: Product = {
   id: 4,
-  name: "Collier Perles Rouges",
+  name: "Collier Rouge",
   category: "Bijouterie",
   price: 15.00,
-  image: "/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png",
+  image: "/lovable-uploads/collierrougz+bouclesrouges.jpg",
   instagramLink: "#",
-  description: "Élégant collier en perles rouges avec ornement doré et pierre rouge centrale."
+  description: "Élégant collier rouge avec possibilité d'assortir avec des boucles d'oreilles (vendues séparément)."
 };
 
-const collierChampagne: Product = {
+const collierBlanc: Product = {
   id: 5,
-  name: "Collier Perles Champagne",
+  name: "Collier Blanc",
   category: "Bijouterie",
   price: 15.00,
-  image: "/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png",
+  image: "/lovable-uploads/collierblanc.jpg",
   instagramLink: "#",
-  description: "Collier raffiné en perles champagne avec ornement doré élégant."
+  description: "Collier raffiné blanc avec finitions élégantes. Un accessoire idéal pour sublimer toutes vos tenues."
 };
 
 const collierNoir: Product = {
   id: 6,
-  name: "Collier Perles Noires",
+  name: "Collier Noir",
   category: "Bijouterie",
   price: 15.00,
-  image: "/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png",
+  image: "/lovable-uploads/collier-noir.jpg",
   instagramLink: "#",
-  description: "Collier chic en perles noires avec ornement doré et cristal central."
+  description: "Collier chic noir avec ornement central. Un accessoire intemporel qui s'adapte à toutes les occasions."
 };
 
 const collierVert: Product = {
   id: 7,
-  name: "Collier Perles Vertes",
+  name: "Collier Vert",
   category: "Bijouterie",
   price: 15.00,
-  image: "/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png",
+  image: "/lovable-uploads/colliervert+bouclesoreillesvert+couronnevert.jpg",
   instagramLink: "#",
-  description: "Collier tendance en perles vertes avec ornement doré et pierre verte."
+  description: "Collier tendance vert, pouvant être assorti avec boucles d'oreilles et couronne de la même teinte (vendus séparément)."
+};
+
+const collierDore: Product = {
+  id: 8,
+  name: "Collier Doré",
+  category: "Bijouterie",
+  price: 15.00,
+  image: "/lovable-uploads/collier-dore.jpg",
+  instagramLink: "#",
+  description: "Élégant collier doré au design raffiné. Une pièce incontournable pour sublimer vos tenues de soirée."
 };
 
 // Boucles d'oreilles
-const bouclesOreilles: Product = {
-  id: 8,
-  name: "Boucles d'oreille",
+const bouclesOreillesRouges: Product = {
+  id: 9,
+  name: "Boucles d'oreilles Rouges",
   category: "Bijouterie",
-  price: 10.00,
-  image: "/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png", // À remplacer avec l'image correcte
+  price: 12.00,
+  image: "/lovable-uploads/collierrougz+bouclesrouges.jpg",
   instagramLink: "#",
-  description: "Élégantes boucles d'oreille artisanales, légères et raffinées. Un accessoire parfait pour compléter votre tenue."
+  description: "Élégantes boucles d'oreilles rouges, parfaites pour compléter votre parure avec le collier assorti (vendu séparément)."
+};
+
+const bouclesOreillesVertes: Product = {
+  id: 10,
+  name: "Boucles d'oreilles Vertes",
+  category: "Bijouterie",
+  price: 12.00,
+  image: "/lovable-uploads/colliervert+bouclesoreillesvert+couronnevert.jpg",
+  instagramLink: "#",
+  description: "Boucles d'oreilles vertes artisanales, parfaites pour compléter votre parure avec le collier et la couronne assortis (vendus séparément)."
+};
+
+// Couronnes
+const couronneVerte: Product = {
+  id: 11,
+  name: "Couronne Verte",
+  category: "Bijouterie",
+  price: 15.00,
+  image: "/lovable-uploads/colliervert+bouclesoreillesvert+couronnevert.jpg",
+  instagramLink: "#",
+  description: "Magnifique couronne verte artisanale pour sublimer vos coiffures. Parfaite avec les boucles d'oreilles et le collier assortis (vendus séparément)."
+};
+
+const couronneVerte2: Product = {
+  id: 12,
+  name: "Couronne Verte Élégante",
+  category: "Bijouterie",
+  price: 15.00,
+  image: "/lovable-uploads/couronneverte.jpg",
+  instagramLink: "#",
+  description: "Somptueuse couronne verte avec finitions dorées. Un accessoire royal pour vos occasions spéciales."
 };
 
 // Caftans
 const caftanRouge: Product = {
-  id: 9,
+  id: 13,
   name: "Caftan Rouge Velours",
   category: "Mode",
   price: 120.00,
@@ -103,7 +144,7 @@ const caftanRouge: Product = {
 };
 
 const caftanBleu: Product = {
-  id: 10,
+  id: 14,
   name: "Caftan Bleu Royal Velours",
   category: "Mode",
   price: 120.00,
@@ -113,7 +154,7 @@ const caftanBleu: Product = {
 };
 
 const caftanBlanc: Product = {
-  id: 11,
+  id: 15,
   name: "Caftan Blanc Crème",
   category: "Mode",
   price: 130.00,
@@ -123,7 +164,7 @@ const caftanBlanc: Product = {
 };
 
 const caftanVert: Product = {
-  id: 12,
+  id: 16,
   name: "Caftan Vert Émeraude",
   category: "Mode",
   price: 120.00,
@@ -133,7 +174,7 @@ const caftanVert: Product = {
 };
 
 const caftanBeige: Product = {
-  id: 13,
+  id: 17,
   name: "Caftan Beige Doré",
   category: "Mode",
   price: 110.00,
@@ -148,10 +189,14 @@ const allProductsList = [
   pomegranateParfum, 
   collierBleu, 
   collierRouge, 
-  collierChampagne, 
+  collierBlanc, 
   collierNoir, 
-  collierVert, 
-  bouclesOreilles, 
+  collierVert,
+  collierDore,
+  bouclesOreillesRouges, 
+  bouclesOreillesVertes,
+  couronneVerte,
+  couronneVerte2,
   caftanRouge,
   caftanBleu,
   caftanBlanc,
@@ -161,7 +206,11 @@ const allProductsList = [
 
 // Exportation des groupes de produits
 export const parfumProducts: Product[] = [hayaParfum, pomegranateParfum];
-export const bijouterieProducts: Product[] = [collierBleu, collierRouge, collierChampagne, collierNoir, collierVert, bouclesOreilles];
+export const bijouterieProducts: Product[] = [
+  collierBleu, collierRouge, collierBlanc, collierNoir, collierVert, collierDore, 
+  bouclesOreillesRouges, bouclesOreillesVertes, 
+  couronneVerte, couronneVerte2
+];
 export const caftansProducts: Product[] = [caftanRouge, caftanBleu, caftanBlanc, caftanVert, caftanBeige];
 export const robesMarocainesProducts: Product[] = [caftanRouge, caftanBleu, caftanBlanc, caftanVert, caftanBeige];
 export const soinsBeauteProducts: Product[] = [hayaParfum, pomegranateParfum];

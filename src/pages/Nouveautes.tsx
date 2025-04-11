@@ -4,9 +4,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Instagram } from "lucide-react";
-import { instagramProducts, bijouterieProducts } from "@/components/InstagramProducts";
+import { bijouterieProducts, parfumProducts } from "@/data/ProductData";
 
 const Nouveautes = () => {
+  // Sélectionner des produits spécifiques pour éviter la duplication
+  const nouveautesBijoux = [
+    bijouterieProducts.find(item => item.name.includes("Couronne Verte Élégante")),
+    bijouterieProducts.find(item => item.name.includes("Collier Blanc")),
+    bijouterieProducts.find(item => item.name.includes("Boucles d'oreilles Rouges"))
+  ].filter(Boolean);
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
@@ -28,27 +35,28 @@ const Nouveautes = () => {
               Nos <span className="text-pink-primary">produits phares</span>
             </h2>
             
+            {/* Couronnes - nouveau produit mis en avant */}
             <div className="bg-white p-8 rounded-lg mb-10 max-w-5xl mx-auto">
-              <h2 className="font-playfair text-2xl font-bold mb-4 text-foreground text-center">Collier 15€ pièce</h2>
+              <h2 className="font-playfair text-2xl font-bold mb-4 text-foreground text-center">Nouvelle Collection - Couronnes 15€</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                   <img 
-                    src="/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png" 
-                    alt="Collection de Colliers" 
+                    src="/lovable-uploads/couronneverte.jpg" 
+                    alt="Couronnes élégantes" 
                     className="w-full h-auto rounded-lg shadow-md"
                   />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-2">Description</h3>
                   <p className="text-muted-foreground mb-4">
-                    Magnifique collection de colliers en perles colorées avec ornements dorés. Chaque collier est une pièce unique, fabriquée avec soin et attention aux détails.
+                    Découvrez notre nouvelle collection de couronnes artisanales. Ces pièces uniques sublimeront vos coiffures pour toutes vos occasions spéciales.
                   </p>
                   <p className="text-muted-foreground mb-6">
-                    Disponibles en plusieurs couleurs : bleu, rouge, champagne, noir et vert. Ces colliers ajouteront une touche d'élégance et de sophistication à n'importe quelle tenue.
+                    Nos couronnes peuvent être assorties à nos colliers et boucles d'oreilles pour créer un ensemble harmonieux et élégant.
                   </p>
                   <div className="flex flex-wrap gap-2 mb-6">
+                    <Badge variant="outline" className="bg-pink-primary/10">Nouveau</Badge>
                     <Badge variant="outline" className="bg-pink-primary/10">Fait main</Badge>
-                    <Badge variant="outline" className="bg-pink-primary/10">Élégant</Badge>
                     <Badge variant="outline" className="bg-pink-primary/10">Exclusif</Badge>
                   </div>
                   <div className="flex justify-between items-center">
@@ -67,22 +75,23 @@ const Nouveautes = () => {
               </div>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 max-w-5xl mx-auto">
-              {bijouterieProducts.map(product => (
+            {/* Bijoux Nouveautés - Grille plus petite */}
+            <h3 className="font-playfair text-2xl font-bold mb-6 text-center">Nouveaux Bijoux</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-10 max-w-5xl mx-auto">
+              {nouveautesBijoux.map(product => (
                 <Card key={product.id} className="overflow-hidden transition-all duration-300 hover:shadow-lg animate-fade-in">
-                  <div className="relative h-72 overflow-hidden">
+                  <div className="relative h-48 overflow-hidden">
                     <img 
                       src={product.image} 
                       alt={product.name} 
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                     />
-                    <Badge className="absolute top-3 right-3 bg-pink-primary text-white font-semibold">
+                    <Badge className="absolute top-2 right-2 bg-pink-primary text-white font-semibold text-xs">
                       Nouveau
                     </Badge>
                   </div>
-                  <CardContent className="p-5">
-                    <span className="text-sm text-pink-primary font-medium">{product.category}</span>
-                    <h3 className="font-playfair text-xl font-semibold mb-2 text-foreground">{product.name}</h3>
+                  <CardContent className="p-3">
+                    <h3 className="font-playfair text-md font-semibold mb-1 text-foreground">{product.name}</h3>
                     <div className="flex justify-between items-center">
                       <span className="font-bold text-foreground">{product.price.toFixed(2)} €</span>
                       <a 
@@ -92,9 +101,10 @@ const Nouveautes = () => {
                       >
                         <Button 
                           variant="ghost" 
-                          className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10"
+                          size="sm"
+                          className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 text-xs"
                         >
-                          Contacter pour commander
+                          Commander
                         </Button>
                       </a>
                     </div>
@@ -103,6 +113,7 @@ const Nouveautes = () => {
               ))}
             </div>
             
+            {/* Parfum - gardé de la version précédente */}
             <div className="bg-white p-8 rounded-lg mb-10 max-w-5xl mx-auto">
               <h2 className="font-playfair text-2xl font-bold mb-4 text-foreground text-center">Eau de parfum haya 100ml - 25.00 €</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">

@@ -3,12 +3,13 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { bijouterieProducts } from "@/components/InstagramProducts";
+import { bijouterieProducts } from "@/data/ProductData";
 
 const Bijouterie = () => {
   // Filtrer les produits par type
-  const colliers = bijouterieProducts.filter(item => item.name.includes("Collier"));
-  const boucles = bijouterieProducts.filter(item => item.name.includes("Boucles"));
+  const colliers = bijouterieProducts.filter(item => item.name.includes("Collier")).slice(0, 3); // Limiter à 3 colliers max
+  const boucles = bijouterieProducts.filter(item => item.name.includes("Boucles")).slice(0, 2); // Limiter à 2 boucles max
+  const couronnes = bijouterieProducts.filter(item => item.name.includes("Couronne")).slice(0, 2); // Limiter à 2 couronnes max
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -23,91 +24,129 @@ const Bijouterie = () => {
           </p>
         </div>
 
-        {/* Section Boucles d'oreilles */}
-        <div className="bg-pink-primary/5 p-8 rounded-lg mb-10">
-          <h2 className="font-playfair text-2xl font-bold mb-4 text-foreground text-center">Boucles d'oreille 10€</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
+        {/* Grille des 3 premières catégories en format compact */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+          {/* Section Boucles d'oreilles */}
+          <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <div className="relative h-40 overflow-hidden">
               <img 
-                src="/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png" 
-                alt="Boucles d'oreille" 
-                className="w-full h-auto rounded-lg shadow-md"
+                src="/lovable-uploads/collierrougz+bouclesrouges.jpg" 
+                alt="Boucles d'oreilles" 
+                className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <h2 className="font-playfair text-xl font-bold p-3 text-white">Boucles d'oreilles</h2>
+              </div>
             </div>
-            <div>
-              <h3 className="font-semibold text-lg mb-2">Description</h3>
-              <p className="text-muted-foreground mb-4">
-                Élégantes boucles d'oreille artisanales, légères et raffinées. Un accessoire parfait pour compléter votre tenue.
+            <CardContent className="p-3">
+              <p className="text-muted-foreground text-sm mb-3">
+                Élégantes boucles d'oreilles artisanales, légères et raffinées.
               </p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                <Badge variant="outline" className="bg-pink-primary/10">Fait main</Badge>
-                <Badge variant="outline" className="bg-pink-primary/10">Élégant</Badge>
-                <Badge variant="outline" className="bg-pink-primary/10">Léger</Badge>
-              </div>
               <div className="flex justify-between items-center">
-                <span className="font-bold text-2xl text-foreground">10.00 €</span>
-                <Button className="bg-pink-primary hover:bg-pink-accent text-white">
-                  Contacter pour commander
-                </Button>
+                <span className="font-bold text-foreground">12.00 €</span>
+                <a 
+                  href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button 
+                    size="sm"
+                    className="bg-pink-primary hover:bg-pink-accent text-white"
+                  >
+                    Commander
+                  </Button>
+                </a>
               </div>
-            </div>
-          </div>
-        </div>
+            </CardContent>
+          </Card>
 
-        {/* Section Colliers */}
-        <div className="bg-pink-primary/5 p-8 rounded-lg mb-10">
-          <h2 className="font-playfair text-2xl font-bold mb-4 text-foreground text-center">Collier 15€ pièce</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
+          {/* Section Colliers */}
+          <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <div className="relative h-40 overflow-hidden">
               <img 
-                src="/lovable-uploads/b966d12f-4d28-4893-928b-e747b75a4c7b.png" 
+                src="/lovable-uploads/collierblanc.jpg" 
                 alt="Collection de Colliers" 
-                className="w-full h-auto rounded-lg shadow-md"
+                className="w-full h-full object-cover"
               />
-            </div>
-            <div>
-              <h3 className="font-semibold text-lg mb-2">Description</h3>
-              <p className="text-muted-foreground mb-4">
-                Magnifique collection de colliers en perles colorées avec ornements dorés. Chaque collier est une pièce unique, fabriquée avec soin et attention aux détails.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Disponibles en plusieurs couleurs : bleu, rouge, champagne, noir et vert. Ces colliers ajouteront une touche d'élégance et de sophistication à n'importe quelle tenue.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                <Badge variant="outline" className="bg-pink-primary/10">Fait main</Badge>
-                <Badge variant="outline" className="bg-pink-primary/10">Élégant</Badge>
-                <Badge variant="outline" className="bg-pink-primary/10">Exclusif</Badge>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <h2 className="font-playfair text-xl font-bold p-3 text-white">Colliers</h2>
               </div>
+            </div>
+            <CardContent className="p-3">
+              <p className="text-muted-foreground text-sm mb-3">
+                Magnifique collection de colliers aux styles variés, disponibles en plusieurs couleurs.
+              </p>
               <div className="flex justify-between items-center">
-                <span className="font-bold text-2xl text-foreground">15.00 € par pièce</span>
-                <Button className="bg-pink-primary hover:bg-pink-accent text-white">
-                  Contacter pour commander
-                </Button>
+                <span className="font-bold text-foreground">15.00 €</span>
+                <a 
+                  href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button 
+                    size="sm"
+                    className="bg-pink-primary hover:bg-pink-accent text-white"
+                  >
+                    Commander
+                  </Button>
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Section Couronnes */}
+          <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <div className="relative h-40 overflow-hidden">
+              <img 
+                src="/lovable-uploads/couronneverte.jpg" 
+                alt="Collection de Couronnes" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                <h2 className="font-playfair text-xl font-bold p-3 text-white">Couronnes</h2>
               </div>
             </div>
-          </div>
+            <CardContent className="p-3">
+              <p className="text-muted-foreground text-sm mb-3">
+                Magnifiques couronnes artisanales pour sublimer vos coiffures et occasions spéciales.
+              </p>
+              <div className="flex justify-between items-center">
+                <span className="font-bold text-foreground">15.00 €</span>
+                <a 
+                  href="https://www.instagram.com/sanaaddict67?igsh=Z2VsMmdhbHo5NGVl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button 
+                    size="sm"
+                    className="bg-pink-primary hover:bg-pink-accent text-white"
+                  >
+                    Commander
+                  </Button>
+                </a>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Grille de produits */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {bijouterieProducts.map((item) => (
+        <h3 className="font-playfair text-2xl font-bold mb-6 text-center">Nos collections</h3>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
+          {/* Utiliser des collections sélectionnées pour éviter la duplication */}
+          {[...colliers, ...boucles, ...couronnes].map((item) => (
             <Card key={item.id} className="overflow-hidden transition-all duration-300 hover:shadow-lg animate-fade-in">
-              <div className="relative h-72 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
                 <img 
                   src={item.image} 
                   alt={item.name} 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
-                <Badge className="absolute top-3 right-3 bg-pink-primary text-white font-semibold">
+                <Badge className="absolute top-2 right-2 bg-pink-primary text-white font-semibold text-xs">
                   Nouveau
                 </Badge>
               </div>
-              <CardContent className="p-5">
-                <span className="text-sm text-pink-primary font-medium">{item.category}</span>
-                <h3 className="font-playfair text-xl font-semibold mb-2 text-foreground">{item.name}</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  {typeof item.description === 'string' && item.description.split('\n')[0]}
-                </p>
+              <CardContent className="p-3">
+                <h3 className="font-playfair text-md font-semibold mb-1 text-foreground">{item.name}</h3>
                 <div className="flex justify-between items-center">
                   <span className="font-bold text-foreground">{item.price.toFixed(2)} €</span>
                   <a 
@@ -117,9 +156,10 @@ const Bijouterie = () => {
                   >
                     <Button 
                       variant="ghost" 
-                      className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10"
+                      size="sm"
+                      className="text-pink-primary hover:text-pink-accent hover:bg-pink-primary/10 text-xs"
                     >
-                      Contacter pour commander
+                      Commander
                     </Button>
                   </a>
                 </div>
